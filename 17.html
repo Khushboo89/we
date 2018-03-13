@@ -1,0 +1,42 @@
+WAP to create a web page using all String functions
+<!DOCTYPE html>
+<html>
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script type="text/javascript">
+var fruits=["Banana","Orange","Apple","Mango"];
+document.getElementById("demo").innerHTML=fruits.toString();
+document.getElementById("demo2").innerHTML=fruits.join("*");
+var x=fruits.pop();
+document.getElementById("demo3").innerHTML="element deleted is: "+x;
+fruits.push("Kiwi");
+document.getElementById("demo4").innerHTML="element inserted is: "+fruits[3];
+fruits.shift();
+fruits.unshift("Lemon");
+for(var i=0;i<fruits.length;i++){
+document.write("<br>"+fruits[i]);
+}
+delete fruits[0];
+document.write("<br>After using delete,the new array is:<br>");
+for (var i = 0; i < fruits.length; i++) {
+document.write("<br"+fruits[i]);
+}
+fruits.splice(2,0,"Lemon","Kiwi");
+document.write("<br>After using splice for deletion<br>");
+for(var i=0;i<fruits.length;i++){
+document.write("<br>"+fruits[i]);
+}
+fruits.sort();
+document.write("<br>"+"After using sort function<br>");
+for (var i = 0; i < fruits.length; i++) {
+document.write("<br"+fruits[i]);
+}
+fruits.reverse();
+document.write("<br>"+"After using reverse function<br>");
+for (var i = 0; i < fruits.length; i++) {
+document.write("<br"+fruits[i]);
+}
+</script>
+</html>

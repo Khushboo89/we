@@ -1,0 +1,31 @@
+Program 21
+WAP to create a web page handling mouse, keyboard events etc.
+<html>
+ <head>
+
+ <script type="text/javascript">
+ <!--
+ function over() {
+ alert ("Mouse Over");
+ }
+
+ function out() {
+ alert ("Mouse Out");
+ }
+ function whichButton(event) {
+ document.getElementById("demo").innerHTML = event.keyCode;
+ }
+ //-->
+ </script>
+
+ </head>
+ <body onkeyup="whichButton(event)">
+ <p>Bring your mouse inside the division to see the result:</p>
+
+ <div onmouseover="over()" onmouseout="out()">
+ <h2> This is inside the division </h2>
+ </div>
+ <p id="demo">Click on this page, and press a key on your keyboard.</p>
+
+ </body>
+</html>

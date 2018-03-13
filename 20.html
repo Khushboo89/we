@@ -1,0 +1,35 @@
+WAP to create a web page handling Form events.
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function confirmInput() {
+ fname = document.forms[0].fname.value;
+ alert("Hello " + fname + "! You will now be redirected to www.gmail.com");
+}
+function myFunction(x) {
+ x.style.background = "yellow";
+}
+function myFunction1() {
+ alert("You pressed a key inside the input field");
+}
+function preferedBrowser() {
+ prefer = document.forms[0].browsers.value;
+ alert("You prefer browsing internet with " + prefer);
+}
+</script>
+</head>
+<body>
+<form onsubmit="confirmInput()" action="https://www.gmail.com/">
+Enter your name: <input id="fname" type="text" size="20" onfocus="myFunction(this)">
+Enter your father's name: <input type="text" onkeypress="myFunction1()">
+Choose which browser you prefer:
+<select id="browsers" onchange="preferedBrowser()">
+<option value="Chrome">Chrome</option>
+<option value="Internet Explorer">Internet Explorer</option>
+<option value="Firefox">Firefox</option>
+</select>
+<input type="submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	Form events
+	</title>
+</head>
+<body>
+<center>
+<h1>Welcome</h1>
+<br><br>
+<form onreset="alert('Form Was Reset')" onsubmit="alert('Congratulations,You have successfully submitted the form')">
+	Name: <input type="text" name="name" id="name" onblur="func1(this.id),func3(this.id)" onfocus="func2(this.id)" oninput="func5()"oninvalid="alert('You must enter your name')" required>
+	<p id="name1"></p>
+	Age: <input type="text" name="age" id="age" onblur="func3(this.id)" onfocus="func2(this.id)" oninvalid="alert('You must enter your age')" required><br><br>
+	Year:<select id="myselect" onchange="func4()">
+		<option value="1">I
+		<option value="2">II
+		<option value="3">III
+		<option value="4">IV	
+		</select><br>
+	<p id="demo"></p>	
+	<input type="submit">
+	<input type="reset">
+
+
+</form>
+<script>
+function func1(x) {
+		var a=document.getElementById(x).value;
+		document.getElementById(x).value=a.toUpperCase();
+}	
+function func2(x)
+{	
+	document.getElementById(x).style.background="#F0F8FF";	
+}
+function func3(x)
+{
+	document.getElementById(x).style.background="white";
+}
+function func4()
+{	
+	var x=document.getElementById("myselect").value;
+	if(x==1)
+		document.getElementById("demo").innerHTML="You are in Freshman year";
+	else if(x==2)
+		document.getElementById("demo").innerHTML="You are in Sophomore year";
+	else if(x==3)
+			document.getElementById("demo").innerHTML="You are in Junior Year";
+	else
+			document.getElementById("demo").innerHTML="You are in Senior Year";	
+
+}
+function func5()
+{	
+	var x=document.getElementById("name");
+	document.getElementById("name1").innerHTML="Hello " + x.value;
+}	
+</script>
+</center>
+</body>
+</html>

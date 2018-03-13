@@ -1,0 +1,22 @@
+body {
+    background-color: lightblue;
+     }
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+    border:1px solid;
+   }
+
+p  {  color:black;
+      font-family:courier;
+      font-size:160%;
+   }
+img {
+       border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+ 
+      
